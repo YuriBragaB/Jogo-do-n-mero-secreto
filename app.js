@@ -12,14 +12,14 @@ campo.innerHTML= texto;
 responsiveVoice.speak(texto,'Brazilian Portuguese Female',{rate:1.2});
 }
 function mensagemInicial(){
-    exibirTextoNaTela('h1','Jogo do numero secreto');
-    exibirTextoNaTela('p', 'Escolha um numero de um 1 a 100');
+    exibirTextoNaTela('h1','Jogo do número secreto');
+    exibirTextoNaTela('p', 'Escolha um número de um 1 a 100');
 }
 mensagemInicial();
 function verificarChute(){
     let chute =document.querySelector('input').value
     if(chute == numeroSecreto){
-        exibirTextoNaTela('h1','Acertou!!');
+        exibirTextoNaTela('h1' , 'Acertou!!');
         let mensagemTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagem = `Parabéns!! Você acertou com ${tentativas} ${mensagemTentativa} .`;
         exibirTextoNaTela('p', mensagem);
@@ -27,10 +27,10 @@ function verificarChute(){
     }
     else{
         if(chute>numeroSecreto){
-            exibirTextoNaTela('h1', 'O numero é menor, tente novamente.');
+            exibirTextoNaTela('p', ' O número é menor, tente novamente.');
         }
         else{
-            exibirTextoNaTela('h1', 'o numero é maior, tente novamente.');
+            exibirTextoNaTela('p', 'O número é maior, tente novamente');
         }
         //tentativas = tentativas + 1
         tentativas++;
