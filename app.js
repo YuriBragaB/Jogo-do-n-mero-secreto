@@ -9,7 +9,7 @@ let tentativas = 1;
 function exibirTextoNaTela(tag,texto) {
 let campo = document.querySelector(tag);
 campo.innerHTML= texto;
-responsiveVoice.speak(texto,'Brazilian Portuguese Female',{rate:1.2})
+responsiveVoice.speak(texto,'Brazilian Portuguese Female',{rate:1.2});
 }
 function mensagemInicial(){
     exibirTextoNaTela('h1','Jogo do numero secreto');
@@ -65,6 +65,6 @@ function reiniciarJogo(){
     mensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true );
 }
-console.log(reiniciarJogo);
+
 
 // html n entende template string, ele espera um texto
